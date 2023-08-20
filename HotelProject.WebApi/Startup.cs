@@ -25,7 +25,14 @@ namespace HotelProject.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("otelApiCors", opts =>
+                {
+                    opts.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
 
+                });
+            });
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -44,7 +51,7 @@ namespace HotelProject.WebApi
             }
 
             app.UseRouting();
-
+            app.UseCors("otelApiCors");
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
