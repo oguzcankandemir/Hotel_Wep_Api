@@ -42,5 +42,10 @@ namespace HotelProject.BusinessLayer.Concrete
         {
             _serviceDal.Update(t);
         }
+
+        Service IGenericService<Service>.TGetByID(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

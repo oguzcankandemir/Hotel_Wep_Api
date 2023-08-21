@@ -44,5 +44,10 @@ namespace HotelProject.BusinessLayer.Concrete
         {
             _subscribeDal.Update(t);
         }
+
+        Subscribe IGenericService<Subscribe>.TGetByID(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

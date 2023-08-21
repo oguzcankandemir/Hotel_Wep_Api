@@ -43,10 +43,5 @@ namespace HotelProject.BusinessLayer.Concrete
         {
             _testimonialDal.Update(t);
         }
-
-        void IGenericService<Testimonial>.TGetByID(int id)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

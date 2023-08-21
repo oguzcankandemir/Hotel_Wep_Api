@@ -34,19 +34,24 @@ namespace HotelProject.BusinessLayer.Concrete
             return _staffDal.GetList();
         }
 
+        public int TGetStaffCount()
+        {
+            throw new NotImplementedException();
+        }
+
         public void TInsert(Staff t)
         {
             _staffDal.Insert(t);
         }
 
+        public List<Staff> TLast4Staff()
+        {
+            throw new NotImplementedException();
+        }
+
         public void TUpdate(Staff t)
         {
             _staffDal.Update(t);
-        }
-
-        void IGenericService<Staff>.TGetByID(int id)
-        {
-            throw new NotImplementedException();
         }
     }
 }
