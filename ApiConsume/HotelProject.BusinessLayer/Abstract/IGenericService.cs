@@ -8,10 +8,10 @@ namespace HotelProject.BusinessLayer.Abstract
 {
     public interface IGenericService<T> where T : class
     {
-        void TInsert (T t);
-        void TUpdate (T t);
+        void TInsert(T t);
         void TDelete(T t);
-        void TGetByID (int id);
-        List<T> TGetList ();
+        void TUpdate(T t);
+        List<T> TGetList();
+        T TGetByID(int id);
     }
 }

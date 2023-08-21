@@ -1,3 +1,8 @@
+using HotelProject.BusinessLayer.Abstract;
+using HotelProject.BusinessLayer.Concrete;
+using HotelProject.DataAccessLayer.Abstract;
+using HotelProject.DataAccessLayer.Concrete;
+using HotelProject.DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -33,6 +38,11 @@ namespace HotelProject.WebApi
 
                 });
             });
+            services.AddDbContext<Context>();
+            services.AddScoped<IStaffDal, EfStaffDal>();
+            services.AddScoped<IStaffService, StaffManager>();
+            services.AddScoped<IRoomDal,EfRoomDal>();
+            services.AddScoped<IRoomService, RoomManager>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
