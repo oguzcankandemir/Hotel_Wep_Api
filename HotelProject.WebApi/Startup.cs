@@ -30,6 +30,19 @@ namespace HotelProject.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<Context>();
+
+            services.AddScoped<IStaffDal, EfStaffDal>();
+            services.AddScoped<IStaffService, StaffManager>();
+
+            services.AddScoped<IRoomDal, EfRoomDal>();
+            services.AddScoped<IRoomService, RoomManager>();
+
+            services.AddScoped<ITestimonialDal, EfTestimonialDal>();
+            services.AddScoped<ITestimonialService, TestimonialManager>();
+
+            services.AddAutoMapper(typeof(Startup));
+            // services.AddScoped
             services.AddCors(opt =>
             {
                 opt.AddPolicy("otelApiCors", opts =>
@@ -38,11 +51,7 @@ namespace HotelProject.WebApi
 
                 });
             });
-            services.AddDbContext<Context>();
-            services.AddScoped<IStaffDal, EfStaffDal>();
-            services.AddScoped<IStaffService, StaffManager>();
-            services.AddScoped<IRoomDal,EfRoomDal>();
-            services.AddScoped<IRoomService, RoomManager>();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
