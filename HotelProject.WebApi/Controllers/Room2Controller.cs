@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using HotelProject.BusinessLayer.Abstract;
 using HotelProject.DtoLayer.Dtos.RoomDto;
-using HotelProject.EntityLayer;
+using HotelProject.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;

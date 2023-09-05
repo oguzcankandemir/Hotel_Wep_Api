@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelProject.EntityLayer
+namespace HotelProject.EntityLayer.Concrete
 {
     public class Subscribe
     {

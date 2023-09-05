@@ -1,6 +1,6 @@
 ﻿using HotelProject.BusinessLayer.Abstract;
 using HotelProject.DataAccessLayer.Abstract;
-using HotelProject.EntityLayer;
+using HotelProject.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,7 +45,7 @@ namespace HotelProject.BusinessLayer.Concrete
 
         Service IGenericService<Service>.TGetByID(int id)
         {
-            throw new NotImplementedException();
+          return  _serviceDal.GetByID(id);
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using HotelProject.BusinessLayer.Abstract;
 using HotelProject.DataAccessLayer.Abstract;
 using HotelProject.DataAccessLayer.EntityFramework;
-using HotelProject.EntityLayer;
+using HotelProject.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace HotelProject.BusinessLayer.Concrete
 {
- 
+
     public class SubscribeManager:ISubscribeService
     {
         private readonly ISubscribeDal _subscribeDal;
