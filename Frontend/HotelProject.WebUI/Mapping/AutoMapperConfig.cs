@@ -1,12 +1,13 @@
 ﻿using AutoMapper;
 using HotelProject.DtoLayer.Dtos.RoomDto;
 using HotelProject.EntityLayer.Concrete;
+using HotelProject.WebUI.Dtos.LoginDto;
 using HotelProject.WebUI.Dtos.RegisterDto;
 using HotelProject.WebUI.Dtos.ServiceDto;
 
 namespace HotelProject.WebUI.Mapping
 {
-    public class AutoMapperConfig:Profile
+    public class AutoMapperConfig : Profile
     {
         public AutoMapperConfig()
         {
@@ -14,13 +15,11 @@ namespace HotelProject.WebUI.Mapping
             CreateMap<ResultServiceDto, Service>().ReverseMap();
             CreateMap<UpdateServiceDto, Service>().ReverseMap();
             CreateMap<CreateServiceDto, Service>().ReverseMap();
-
             CreateMap<RoomAddDto, Room>();
             CreateMap<Room, RoomAddDto>();
-
             CreateMap<UpdateRoomDto, Room>().ReverseMap();
-             CreateMap<CreateNewUserDto,AppUser>().ReverseMap();    
-
+            CreateMap<CreateNewUserDto, AppUser>().ReverseMap();
+            CreateMap<LoginUserDto, AppUser>().ReverseMap();
         }
     }
 }
