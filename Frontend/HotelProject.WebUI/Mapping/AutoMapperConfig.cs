@@ -13,7 +13,6 @@ namespace HotelProject.WebUI.Mapping
     {
         public AutoMapperConfig()
         {
-
             CreateMap<ResultServiceDto, Service>().ReverseMap();
             CreateMap<UpdateServiceDto, Service>().ReverseMap();
             CreateMap<CreateServiceDto, Service>().ReverseMap();
