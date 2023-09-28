@@ -28,6 +28,9 @@ namespace HotelProject.WebUI
             services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
             services.AddHttpClient();
             services.AddControllersWithViews();
+            services.AddControllersWithViews()
+                 .AddRazorRuntimeCompilation();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
