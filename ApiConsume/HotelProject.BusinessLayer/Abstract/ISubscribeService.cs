@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HotelProject.BusinessLayer.Abstract
 {
-    internal interface ISubscribeService:IGenericService<Subscribe>
+    public interface ISubscribeService : IGenericService<Subscribe>
     {
     }
 }
